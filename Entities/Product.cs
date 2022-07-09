@@ -1,0 +1,18 @@
+﻿namespace Exercise_Inheritance_Polymorphism.Entities {
+    class Product {
+        public string Name { get; set; }
+        public double Price { get; set; }
+
+        public Product(string name, double price) {
+            Name = name;
+            Price = price;
+        }
+
+        public virtual string PriceTag() {
+            return "\n\nPRICES: \n"
+                + Name
+                + ", US$"
+                + Price.ToString("F2");
+        }
+    }
+}
